@@ -1,0 +1,129 @@
+@import 'node_modules/elr-scss-functions/main';
+
+@mixin elr-flex-image() {
+  max-width: 100%;
+  height: auto;
+}
+
+@mixin elr-circle-image($config: ()) {
+  $config: extend(
+    (
+      width: 300px
+    ),
+    $config
+  );
+
+  $width: map-get($config, width);
+
+  width: $width;
+  height: $width;
+  border-radius: ($width / 2);
+  overflow: hidden;
+  position: relative;
+
+  img {
+    height: $width;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin elr-rounded-image($config: ()) {
+  $config: extend(
+    (
+      border-radius: 5px
+    ),
+    $config
+  );
+
+  $border-radius: map-get($config, border-radius);
+
+  height: auto;
+  border-radius: $border-radius;
+  max-width: 100%;
+}
+
+@mixin elr-image-overlay($config: ()) {
+  $config: extend(
+    (
+      overlay-color: #1976d2,
+      initial-opacity: 0,
+      final-opacity: 0.5
+    ),
+    $config
+  );
+
+  $overlay-color: map-get($config, overlay-color);
+  $initial-opacity: map-get($config, initial-opacity);
+  $final-opacity: map-get($config, final-opacity);
+
+  position: relative;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $overlay-color;
+    width: 100%;
+    height: 100%;
+    opacity: $initial-opacity;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    &::after {
+      opacity: $final-opacity;
+    }
+  }
+}
+
+@mixin elr-retina($url) {
+  background-image: url('/logo.png');
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    background-image: url('/logo@2x.png');
+    background-size: 100px auto;
+  }
+}
+
+// an image that will stay centered in box even if box gets smaller than image
+@mixin elr-constrained-image($config: ()) {
+  $config: extend(
+    (
+      width: 300px,
+      height: 300px
+    ),
+    $config
+  );
+
+  $width: map-get($config, width);
+  $height: map-get($config, height);
+
+  width: $width;
+  height: $height;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    height: $height;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

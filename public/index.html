@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Image Styles | ELR CSS Utilities</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+      integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/images.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <div class="wrapper">
+      <div class="content-holder">
+        <div class="demo-content">
+          <h1 class="main-heading">Flexible Images</h1>
+          <p class="subheading">
+            The below image breaks out of its container. Even worse its also not
+            responsive at all.
+          </p>
+          <div class="image-holder">
+            <img src="http://placekitten.com/1200/800" alt="kitten" />
+          </div>
+          <p class="subheading">
+            With the flex-image class applied the image stays within the
+            constraints of its container. It also resizes dynamically when the
+            window is resized. Almost like magic!
+          </p>
+          <div class="image-holder">
+            <img
+              src="http://placekitten.com/1200/800"
+              alt="kitten"
+              class="flex-image"
+            />
+          </div>
+          <div class="image-holder">
+            <a href="#"
+              ><img
+                src="http://placekitten.com/1200/800"
+                alt="kitten"
+                class="flex-image"
+            /></a>
+          </div>
+        </div>
+        <div class="demo-content">
+          <h1 class="main-heading">Circular Images</h1>
+          <p class="subheading">
+            Perfectly round images. Since the image will expand to fill its
+            parent container, these work best for images that are at least as
+            tall and wide as their parent element.
+          </p>
+          <figure class="circle-image">
+            <img src="http://placekitten.com/300/300" alt="kitten" />
+          </figure>
+          <figure class="circle-image">
+            <img src="http://placekitten.com/500/300" alt="kitten" />
+          </figure>
+          <figure class="smaller-circle-image">
+            <img src="http://placekitten.com/500/300" alt="kitten" />
+          </figure>
+          <figure class="large-circle-image">
+            <img src="http://placekitten.com/300/200" alt="kitten" />
+          </figure>
+        </div>
+        <div class="demo-content">
+          <h1 class="main-heading">Rounded Images</h1>
+          <p class="subheading">Images with rounded corners</p>
+          <img
+            src="http://placekitten.com/300/300"
+            alt="kitten"
+            class="rounded-image-5px"
+          />
+          <img
+            src="http://placekitten.com/300/300"
+            alt="kitten"
+            class="rounded-image-10px"
+          />
+        </div>
+        <div class="demo-content">
+          <h1 class="main-heading">Images with Overlay</h1>
+          <p class="subheading">images with a transparent color overlay</p>
+          <div class="image-holder">
+            <div class="image-overlay">
+              <img src="http://placekitten.com/400/300" alt="kitten" />
+            </div>
+          </div>
+        </div>
+        <div class="demo-content">
+          <h1 class="main-heading">Ratio Images</h1>
+          <p class="subheading">Images that conform to a specific ratio</p>
+          <figure class="image-square">
+            <img src="http://placekitten.com/600/500" alt="kitten" />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 # Images
 
 [![npm version](http://img.shields.io/npm/v/elr-scss-images.svg)](https://www.npmjs.org/package/elr-scss-images)
-[![Build Status](https://github.com/elr-scss-images/workflows/CI/badge.svg)](https://github.com/elr-scss-images/actions?workflow=CI)
+[![CI](https://github.com/Beth3346/elr-scss-images/actions/workflows/node.js.yml/badge.svg)](https://github.com/Beth3346/elr-scss-images/actions/workflows/node.js.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-images.svg?style=flat)](https://npmjs.com/package/elr-scss-images)
 
